@@ -35,9 +35,45 @@ The Student Staff Management Portal is a web application that enables students a
     - Create a database in MariaDB.
     - Import the provided SQL script to set up the necessary tables:
       ```sql
-      CREATE DATABASE student_staff_management;
-      USE student_staff_management;
-      SOURCE path/to/your/sql/script.sql;
+      sql cmd for studentproject :
+-- Create the database
+CREATE DATABASE studentproject;
+
+-- Use the created database
+USE studentproject;
+
+-- Create the "users" table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Create the "marks" table
+CREATE TABLE marks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_username VARCHAR(50) NOT NULL,
+    subject VARCHAR(50) NOT NULL,
+    marks INT NOT NULL,
+    FOREIGN KEY (student_username) REFERENCES users(username)
+);
+
+
+sql cmd for teacherproject :
+-- Create the database
+CREATE DATABASE teacherproject;
+
+-- Use the created database
+USE teacherproject;
+
+-- Create the "users" table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
       ```
 
 3. **Configure the Application**:
