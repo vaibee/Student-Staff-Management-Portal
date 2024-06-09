@@ -99,8 +99,5 @@ The Student Staff Management Portal is a web application that enables students a
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to follow the coding standards and include relevant tests for your changes.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
-For any queries or support, please contact [your.email@example.com](mailto:your.email@example.com).
+For any queries or support, please contact (vaibhavoffl613@gmail.com).
